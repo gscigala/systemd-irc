@@ -9,12 +9,17 @@ Download the service and place it under `/etc/systemd/system` in your system.
 
 Configuration
 -------------
-Enable and run the service with the following commands:
+To enable the irc service at startup:
 
-    # systemctl daemon-reload
     # systemctl enable irc
-    # systemctl start irc
+    
+To start the service:
 
-You can check the status of the service by calling
+    # systemctl start irc
+    
+You can check the status of the service by calling:
 
     $ systemctl status irc
+
+
+For more information about systemd, please visit https://www.freedesktop.org/wiki/Software/systemd/
