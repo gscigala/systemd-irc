@@ -1,0 +1,13 @@
+[Unit]
+Description=Autostart IRC irssi client into a screen
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=guillaume
+ExecStart=/usr/bin/screen -U -d -m -S irc bash -c '/usr/bin/irssi'
+RemainAfterExit=yes
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
